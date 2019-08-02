@@ -17,11 +17,14 @@ public class PriceCalculatorService {
 			//Can be tested further
 			if(null!=item.getDomain() && item.getNoOfYears()>0) {
 				Integer ratePerYear=domainPrice.get(item.getDomain());
+				System.out.println("");
 				if(ratePerYear>0) { //like this
+					System.out.println(item.getDomain()+" * "+item.getNoOfYears()+"  = "+ratePerYear*item.getNoOfYears());
 					price=price+(ratePerYear*item.getNoOfYears());
 				}
 				}
 			}
+		System.out.println("\nTotal Price ="+price);
 		return price;
 	}
 
